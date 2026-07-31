@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relatório de Frequência — URE Caieiras — 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+@page{size:A4;margin:12mm 10mm 16mm 10mm}
+:root{--azul-escuro:#0a2f6c;--azul-profundo:#041a3a;--azul-medio:#123f7a;--vermelho:#d32f2f;--dourado:#ffec9e;--fundo-externo:#041633;--superficie:#f8fafc;--superficie-alt:#f1f5f9;--borda-clara:#e0e4e9;--borda-fina:#e2e8f0;--texto-escuro:#0a2f6c;--texto-corpo:#1e293b;--texto-muted:#475569;--texto-suave:#64748b;--texto-footer:#8bacc8;--verde:#16a34a;--verde-bg:#dcfce7;--verde-escuro:#14532d;--vermelho-bg:#fee2e2;--amarelo-bg:#ffedd5;--amarelo-texto:#9a3412;--azul-badge-bg:#eef2ff;--azul-badge-txt:#1e40af;--raio-grande:48px;--raio-pill:60px;--raio-medio:24px;--raio-pequeno:20px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:radial-gradient(ellipse at 15% 30%,rgba(10,47,108,.55) 0%,transparent 55%),radial-gradient(ellipse at 85% 70%,rgba(211,47,47,.12) 0%,transparent 45%),linear-gradient(155deg,var(--fundo-externo) 0%,#030e1f 100%);min-height:100vh;padding:10px;color:var(--texto-corpo);font-size:9pt;line-height:1.5;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.cover{page-break-after:always;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;background:radial-gradient(ellipse at 20% 80%,rgba(10,47,108,.7) 0%,transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(211,47,47,.15) 0%,transparent 40%),linear-gradient(155deg,var(--fundo-externo) 0%,#020c18 100%);color:#e0e6f0;padding:40px 30px;overflow:hidden}
+.cover::before{content:'';position:absolute;top:-100px;right:-100px;width:350px;height:350px;background:radial-gradient(circle,rgba(211,47,47,.1) 0%,transparent 65%);pointer-events:none}
+.cover-logo{position:relative;z-index:1;margin-bottom:30px}
+.cover-logo img{height:90px;background:#fff;padding:8px 14px;border-radius:18px;box-shadow:0 6px 24px rgba(0,0,0,.3)}
+.cover-badge{position:relative;z-index:1;background:var(--vermelho);color:#fff;padding:8px 28px;border-radius:var(--raio-pill);font-weight:800;letter-spacing:1.5px;font-size:.75rem;text-transform:uppercase;box-shadow:0 4px 16px rgba(211,47,47,.4);margin-bottom:36px}
+.cover h1{position:relative;z-index:1;font-weight:800;font-size:26pt;line-height:1.12;margin-bottom:16px;max-width:680px;color:#fff}
+.cover h1 span{display:block;font-weight:400;font-size:14pt;color:var(--dourado);margin-top:10px}
+.cover-line{position:relative;z-index:1;width:80px;height:3px;background:linear-gradient(90deg,var(--vermelho),var(--dourado));margin:28px auto;border-radius:4px}
+.cover-school{position:relative;z-index:1;font-weight:700;font-size:1.1rem;color:var(--dourado);letter-spacing:.3px;margin-bottom:10px}
+.cover-meta{position:relative;z-index:1;font-family:'DM Mono',monospace;font-size:8pt;color:var(--texto-footer);line-height:2.2;letter-spacing:.06em}
+.cover-footer{position:absolute;bottom:30px;left:0;right:0;text-align:center;z-index:1;font-family:'DM Mono',monospace;font-size:7pt;color:rgba(139,172,200,.4);letter-spacing:.12em;text-transform:uppercase}
+.main-container{max-width:1100px;margin:0 auto;background:#fff;border-radius:var(--raio-grande);padding:20px;box-shadow:0 30px 60px rgba(0,0,0,.25);border:1.5px solid rgba(10,47,108,.12);position:relative;overflow:hidden}
+.main-container::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(211,47,47,.04) 0%,transparent 70%);pointer-events:none}
+.header{display:flex;justify-content:space-between;align-items:center;background:linear-gradient(135deg,rgba(10,47,108,.95) 0%,rgba(4,26,58,.97) 100%);padding:12px 24px;border-radius:var(--raio-pill);margin-bottom:20px;flex-wrap:wrap;gap:12px;border:1px solid rgba(255,236,158,.1)}
+.logo-area{display:flex;align-items:center;gap:12px}
+.logo-area img{height:44px;background:#fff;padding:4px 8px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.logo-text{font-size:.88rem;font-weight:700;color:var(--dourado);letter-spacing:.5px;line-height:1.3}
+.logo-text span{display:block;font-size:.65rem;font-weight:500;color:rgba(255,236,158,.55);letter-spacing:1.5px;text-transform:uppercase}
+.title-badge{background:var(--vermelho);color:#fff;padding:6px 18px;border-radius:var(--raio-pill);font-weight:800;letter-spacing:1.5px;font-size:.65rem;text-transform:uppercase;box-shadow:0 4px 12px rgba(211,47,47,.35)}
+.section-title{font-size:1.2rem;font-weight:800;color:var(--azul-escuro);margin:20px 0 6px 0;padding-bottom:6px;border-bottom:2.5px solid var(--azul-escuro);display:flex;align-items:center;gap:8px}
+.section-title .num{background:var(--azul-escuro);color:var(--dourado);font-family:'DM Mono',monospace;font-size:.7rem;width:26px;height:26px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;flex-shrink:0}
+.snap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}
+.snap-card{padding:14px 8px;border-radius:var(--raio-pequeno);text-align:center;border:1.5px solid}
+.snap-card .number{font-weight:800;font-size:18pt;line-height:1}
+.snap-card .label{font-family:'DM Mono',monospace;font-size:6pt;text-transform:uppercase;letter-spacing:.12em;margin-top:4px;font-weight:600}
+.card-ifa{background:var(--azul-badge-bg);border-color:#93c5fd;color:var(--azul-badge-txt)}
+.card-warn{background:#fef9c3;border-color:#e03d3d;color:#854d0e}
+.card-alert{background:var(--vermelho-bg);border-color:#fca5a5;color:#991b1b}
+.card-good{background:var(--verde-bg);border-color:#efc386;color:var(--verde-escuro)}
+.status-banner{display:flex;align-items:center;gap:14px;padding:16px 20px;border-radius:var(--raio-medio);margin:14px 0;border:2px solid}
+.status-banner .s-icon{font-size:1.8rem;line-height:1;flex-shrink:0}
+.status-banner .s-info h3{font-size:1rem;font-weight:800;margin-bottom:2px}
+.status-banner .s-info p{font-size:8pt;margin:0;line-height:1.5}
+.status-banner-alert{background:var(--vermelho-bg);border-color:#fca5a5}
+.status-banner-alert .s-info h3{color:#991b1b}
+.status-banner-alert .s-info p{color:#991b1b}
+.turma-section{margin-bottom:1.5rem;page-break-inside:avoid}
+.turma-header{background:linear-gradient(135deg,var(--azul-escuro),var(--azul-medio));color:white;border-radius:var(--raio-medio);padding:10px 16px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;cursor:pointer;transition:all 0.2s}
+.turma-header:hover{background:linear-gradient(135deg,var(--vermelho),#b71c1c)}
+.turma-header h4{font-size:.88rem;font-weight:700;display:flex;align-items:center;gap:8px}
+.turma-badges{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.badge{font-family:'DM Mono',monospace;font-size:5.5pt;font-weight:600;padding:3px 10px;border-radius:var(--raio-pill);text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+.badge-blue{background:rgba(255,255,255,.15);color:var(--dourado)}
+.badge-green{background:rgba(34,197,94,.2);color:#efe686}
+.badge-red{background:rgba(211,47,47,.2);color:#fca5a5}
+.badge-amber{background:rgba(245,158,11,.2);color:#fcd34d}
+.toggle-icon{transition:transform 0.3s;font-size:.9rem}
+.toggle-icon.open{transform:rotate(180deg)}
+.table-wrap{overflow-x:auto;border-radius:var(--raio-pequeno);border:1.5px solid var(--borda-fina);margin-bottom:8px;display:none}
+.table-wrap.open{display:block}
+table{width:100%;border-collapse:collapse;font-size:7pt}
+thead{background:var(--superficie-alt)}
+th{font-family:'DM Mono',monospace;font-weight:500;font-size:6pt;text-transform:uppercase;letter-spacing:.08em;color:var(--azul-escuro);padding:7px 5px;text-align:center;white-space:nowrap;border-bottom:2px solid var(--borda-fina)}
+td{padding:5px;border-bottom:1px solid var(--borda-fina);vertical-align:top;text-align:center}
+tbody tr:nth-child(even){background:rgba(10,47,108,.02)}
+tbody tr:hover{background:rgba(10,47,108,.04)}
+td.num{font-family:'DM Mono',monospace;font-size:7pt;text-align:center}
+.td-green{color:var(--verde);font-weight:700}
+.td-red{color:var(--vermelho);font-weight:700}
+.td-orange{color:var(--amarelo-texto);font-weight:700}
+.td-name{text-align:left;font-weight:600;color:var(--azul-escuro);white-space:nowrap}
+tr.zero-row{background:var(--vermelho-bg)!important}
+tr.zero-row td{color:#991b1b}
+.highlight-row{background:rgba(211,47,47,.06)!important}
+.alert-box{background:var(--vermelho-bg);border:1.5px solid #fca5a5;border-radius:var(--raio-pequeno);padding:10px 14px;margin:6px 0;display:flex;align-items:center;gap:10px;font-size:7.5pt;color:#991b1b}
+.alert-icon{font-size:1.2rem;flex-shrink:0}
+.alert-box-warn{background:#fef9c3;border-color:#fde047;color:#854d0e}
+.filter-bar{display:flex;gap:8px;margin:10px 0;flex-wrap:wrap;align-items:center}
+.filter-bar label{font-size:7.5pt;font-weight:600;color:var(--texto-suave)}
+.filter-bar select,.filter-bar input{font-family:'DM Sans',sans-serif;font-size:7.5pt;padding:6px 12px;border-radius:var(--raio-pill);border:1.5px solid var(--borda-clara);background:var(--superficie);color:var(--texto-corpo)}
+.filter-bar select:focus,.filter-bar input:focus{outline:none;border-color:var(--azul-escuro)}
+.search-box{width:200px}
+.legend{display:flex;gap:1rem;flex-wrap:wrap;padding:8px 12px;background:var(--superficie);border-radius:var(--raio-pequeno);border:1px solid var(--borda-fina);font-size:6.5pt;color:var(--texto-suave);margin:10px 0}
+.legend-item{display:flex;align-items:center;gap:4px}
+.legend-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+footer{text-align:center;margin-top:1.5rem;padding:1rem;color:var(--texto-footer);font-size:.62rem;border-top:1px solid var(--borda-fina);letter-spacing:.3px}
+.page-num{font-family:'DM Mono',monospace;font-size:6.5pt;color:var(--texto-muted);text-align:right;margin-top:4px}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.main-container{animation:fadeUp .4s ease forwards}
+@media print{body{background:#fff!important;padding:0;font-size:8pt}.cover{min-height:auto;height:100vh;background:radial-gradient(ellipse at 20% 80%,rgba(10,47,108,.7) 0%,transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(211,47,47,.15) 0%,transparent 40%),linear-gradient(155deg,var(--fundo-externo) 0%,#020c18 100%)!important}.main-container{max-width:100%;box-shadow:none;border-radius:0;padding:0;border:none}.header{border-radius:12px}table{font-size:6.5pt}thead th{font-size:5.5pt;padding:4px}tbody td{padding:3px 4px}.turma-section{page-break-inside:auto}}
+@media(max-width:640px){.main-container{padding:10px;border-radius:24px}.header{padding:10px 14px;border-radius:24px}.snap-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<!-- CAPA -->
+<div class="cover">
+  <div class="cover-logo">
+    <img src="https://i.ibb.co/0p01LzxB/logo3de.jpg" alt="Logo SEDUC SP">
+  </div>
+  <div class="cover-badge">URE Caieiras</div>
+  <h1>
+    Relatório de Frequência<br>Escolar
+    <span>Perfil de Estudantes com Risco de Reprovação por Faltas</span>
+  </h1>
+  <div class="cover-line"></div>
+  <div class="cover-school">Ensino Médio — 1ª, 2ª e 3ª Série — Ano Letivo 2026</div>
+  <div class="cover-meta">
+    TOTAL DE ALUNOS MONITORADOS: <strong style="color:#fca5a5;">177</strong> &nbsp;&middot;&nbsp; TURMAS: 24<br>
+    PRESENÇA ANUAL MÉDIA: <strong style="color:#fca5a5;">60,3%</strong> &nbsp;&middot;&nbsp; ALUNOS COM 0% NA SEMANA: <strong style="color:#fca5a5;">11</strong><br>
+    SITUAÇÃO: <strong style="color:#fca5a5;">ALERTA — ACOMPANHAMENTO PRIORITÁRIO</strong>
+  </div>
+  <div class="cover-footer">
+    Secretaria de Educação do Estado de São Paulo &nbsp;&middot;&nbsp; Documento de Uso Interno &nbsp;&middot;&nbsp; Julho 2026
+  </div>
+</div>
+
+<!-- PAINEL PRINCIPAL -->
+<div class="main-container">
+  <div class="header">
+    <div class="logo-area">
+      <img src="https://i.ibb.co/0p01LzxB/logo3de.jpg" alt="Logo SEDUC SP">
+      <div class="logo-text">Frequência — Ensino Médio<span>URE CAIEIRAS — RELATÓRIO DE FREQUÊNCIA 2026</span></div>
+    </div>
+    <div class="title-badge">Frequência 2026</div>
+  </div>
+
+  <div class="section-title"><span class="num">1</span> Painel Geral — Indicadores</div>
+  <div class="snap-grid" id="globalStats"></div>
+
+  <div class="status-banner status-banner-alert" style="margin-top:14px">
+    <div class="s-icon">&#9888;</div>
+    <div class="s-info">
+      <h3>Alerta Crítico — Frequência Baixa no Ensino Médio</h3>
+      <p>A presença anual média de <strong id="avgAnualBadge">--</strong> está significativamente abaixo do mínimo recomendado. Há <strong id="zeroBadge">--</strong> alunos com <strong>0% de presença na semana atual</strong> e <strong id="critBadge">--</strong> com presença anual abaixo de 50%. A turma <strong>1ª Série C</strong> concentra o maior número de alunos em situação crítica.</p>
+    </div>
+  </div>
+
+  <!-- FILTROS -->
+  <div class="section-title"><span class="num">2</span> Filtros e Busca</div>
+  <div class="filter-bar">
+    <label>Buscar:</label>
+    <input type="text" class="search-box" id="searchBox" placeholder="Nome do aluno...">
+    <label>Etapa:</label>
+    <select id="filterEtapa">
+      <option value="todas">Todas</option>
+      <option value="1ª SERIE">1ª Série</option>
+      <option value="2ª SERIE">2ª Série</option>
+      <option value="3ª SERIE">3ª Série</option>
+    </select>
+    <label>Ordenar:</label>
+    <select id="sortBy">
+      <option value="turma">Turma</option>
+      <option value="pa">Presença Anual ↑</option>
+      <option value="ps">Semana Atual ↑</option>
+    </select>
+  </div>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:var(--verde)"></div> ≥ 70%</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--amarelo-texto)"></div> 50–69%</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--vermelho)"></div> &lt; 50%</div>
+    <div class="legend-item"><span style="background:var(--vermelho-bg);padding:1px 5px;border-radius:3px;font-weight:700;color:#991b1b;font-size:6pt">0%</span> Zero absoluto</div>
+    <div class="legend-item"><span class="td-green">▲</span> Melhora</div>
+    <div class="legend-item"><span class="td-red">▼</span> Queda</div>
+  </div>
+
+  <!-- ALERTAS CRÍTICOS -->
+  <div class="section-title"><span class="num">3</span> Alertas Críticos</div>
+  <div id="alertsPanel"></div>
+
+  <!-- LISTA POR TURMA -->
+  <div class="section-title"><span class="num">4</span> Frequência Detalhada por Turma</div>
+  <div id="reportContent"></div>
+
+  <footer>
+    URE Caieiras — Secretaria de Educação do Estado de São Paulo<br>
+    Relatório gerado para acompanhamento pedagógico — Julho 2026
+  </footer>
+  <div class="page-num">Página 02+</div>
+</div>
+
+<script>
+const DATA=[
+{a:"LORENA LAMBERT BATISTA",pa:74,ps:74,pp:71,t:"1ª SERIE A"},
+{a:"AGATHA ELOIZA ARAUJO FERREIRA",pa:71,ps:52,pp:100,t:"1ª SERIE A"},
+{a:"BRUNO AUGUSTO DA SILVA CONCEICAO",pa:56,ps:44,pp:100,t:"1ª SERIE A"},
+{a:"SAULO SOARES DA SILVA",pa:40,ps:60,pp:0,t:"1ª SERIE B"},
+{a:"ISABELLE CHRISTINNE DE OLIVEIRA CARDOSO",pa:63,ps:64,pp:71,t:"1ª SERIE B"},
+{a:"EITHOR WILLIAM TOZETTI DE SIQUEIRA",pa:60,ps:4,pp:100,t:"1ª SERIE B"},
+{a:"DAVI SOUSA DE CARVALHO",pa:62,ps:64,pp:100,t:"1ª SERIE B"},
+{a:"CAMILLY VITORIA SERGIO DOS SANTOS",pa:70,ps:36,pp:100,t:"1ª SERIE B"},
+{a:"BEATRIZ SILVA SANTOS",pa:72,ps:36,pp:100,t:"1ª SERIE B"},
+{a:"WAGNER JUNIOR RODRIGUES DOS ANJOS",pa:73,ps:100,pp:100,t:"1ª SERIE B"},
+{a:"MARJORIE LEITE DA SILVA",pa:59,ps:4,pp:100,t:"1ª SERIE B"},
+{a:"LUCIANO PEDRO DA SILVA JUNIOR",pa:72,ps:4,pp:100,t:"1ª SERIE B"},
+{a:"GABRIEL FERREIRA DE SOUZA",pa:73,ps:7,pp:75,t:"1ª SERIE C"},
+{a:"MURILO MATOS DOS SANTOS",pa:73,ps:7,pp:75,t:"1ª SERIE C"},
+{a:"RHAYSLA ALVES SILVA DOS SANTOS",pa:64,ps:33,pp:75,t:"1ª SERIE C"},
+{a:"RAFAEL MAGALHÃES DIONISIO",pa:42,ps:33,pp:75,t:"1ª SERIE C"},
+{a:"RAFAEL SANTOS GOMES DE MATOS",pa:71,ps:40,pp:75,t:"1ª SERIE C"},
+{a:"ISABELA NUNES DA SILVA",pa:67,ps:7,pp:75,t:"1ª SERIE C"},
+{a:"EMANUEL RYAN SANTOS DO COUTO",pa:65,ps:73,pp:100,t:"1ª SERIE C"},
+{a:"LUCAS HENRIQUETA MENDES SILVA",pa:73,ps:0,pp:75,t:"1ª SERIE C"},
+{a:"KAUÃ RAMOS SANTOS",pa:74,ps:53,pp:75,t:"1ª SERIE C"},
+{a:"DANILO TOSIN",pa:56,ps:40,pp:75,t:"1ª SERIE C"},
+{a:"ISABELLA SILVA MELO",pa:61,ps:0,pp:75,t:"1ª SERIE C"},
+{a:"PEDRO HENRIQUE REBOUÇAS DA SILVA",pa:55,ps:0,pp:75,t:"1ª SERIE C"},
+{a:"WINICYUS SILVA DOS SANTOS",pa:67,ps:13,pp:75,t:"1ª SERIE C"},
+{a:"ISAC BRAYAN FIGUEIREDO DA SILVA",pa:67,ps:33,pp:75,t:"1ª SERIE C"},
+{a:"DAVI LUCAS GODOI",pa:68,ps:27,pp:100,t:"1ª SERIE C"},
+{a:"PEDRO HENRIQUE SALES GONÇALVES",pa:70,ps:0,pp:75,t:"1ª SERIE C"},
+{a:"THIAGO LINO DA COSTA",pa:67,ps:0,pp:75,t:"1ª SERIE C"},
+{a:"JOAQUIM ISAAC QUEIROZ DE ALMEIDA",pa:61,ps:0,pp:75,t:"1ª SERIE C"},
+{a:"MATEUS BARROS DELGADO",pa:61,ps:13,pp:75,t:"1ª SERIE C"},
+{a:"ESTER BENTO MOREIRA",pa:74,ps:27,pp:75,t:"1ª SERIE C"},
+{a:"PYETRO MIGUEL SANTOS DE SOUZA",pa:70,ps:42,pp:100,t:"2ª SERIE A"},
+{a:"ASHLEY MUNIK DOS SANTOS GUEDES",pa:74,ps:100,pp:100,t:"2ª SERIE A"},
+{a:"ISABELLI SANTOS DE OLIVEIRA",pa:37,ps:15,pp:43,t:"2ª SERIE A"},
+{a:"JAMILLY CRISTINA DA SILVA ARRUDA",pa:27,ps:15,pp:43,t:"2ª SERIE A"},
+{a:"LUCAS MOURA FERREIRA",pa:38,ps:15,pp:43,t:"2ª SERIE A"},
+{a:"VICTÓRIA EDUARDA DA SILVA OSÓRIO",pa:57,ps:19,pp:43,t:"2ª SERIE A"},
+{a:"MARINA ANTONELLA RICCI SANCHES",pa:69,ps:17,pp:100,t:"2ª SERIE B"},
+{a:"GUILHERME DA SILVA AMÉRICA",pa:11,ps:7,pp:0,t:"2ª SERIE B"},
+{a:"GUILHERME PINHEIRO FIGUEIREDO",pa:52,ps:8,pp:100,t:"2ª SERIE C"},
+{a:"ISAQUE PAIXÃO DOS SANTOS",pa:70,ps:54,pp:100,t:"2ª SERIE C"},
+{a:"BRUNO FERREIRA DOS SANTOS",pa:67,ps:11,pp:100,t:"2ª SERIE D"},
+{a:"KAYNNA DE OLIVEIRA JACINTHO",pa:62,ps:11,pp:86,t:"2ª SERIE D"},
+{a:"KENNY SU",pa:48,ps:19,pp:86,t:"2ª SERIE D"},
+{a:"PIETRO DOS SANTOS FURLAN",pa:67,ps:75,pp:100,t:"2ª SERIE E"},
+{a:"KAUE CZANK RIBEIRO",pa:62,ps:38,pp:100,t:"2ª SERIE E"},
+{a:"RIQUELME ELIDIO DA ROSA",pa:60,ps:38,pp:100,t:"2ª SERIE E"},
+{a:"LUIZ HENRIQUE SANTOS DE LIMA",pa:72,ps:81,pp:100,t:"2ª SERIE E"},
+{a:"STEFANNY VITORIA DE SOUZA TOLEDO",pa:67,ps:44,pp:100,t:"2ª SERIE E"},
+{a:"GUSTAVO SILVA MARTINS",pa:59,ps:31,pp:100,t:"2ª SERIE E"},
+{a:"NICKAEL DOS SANTOS DE LIMA SILVA",pa:69,ps:63,pp:100,t:"2ª SERIE E"},
+{a:"DAVID INACIO SILVA DE OLIVEIRA",pa:69,ps:94,pp:100,t:"2ª SERIE E"},
+{a:"RENATO YAGO DE OLIVEIRA PEREIRA",pa:68,ps:88,pp:100,t:"2ª SERIE E"},
+{a:"ERIC WAGNER TAVARES LEONCIO",pa:69,ps:31,pp:100,t:"2ª SERIE E"},
+{a:"MAYARA KELLY MARQUES DA SILVA",pa:61,ps:31,pp:100,t:"2ª SERIE E"},
+{a:"RENAN MENDES DE QUEIROZ",pa:67,ps:50,pp:100,t:"2ª SERIE E"},
+{a:"GIOVANA MOREIRA RODRIGUES",pa:63,ps:31,pp:100,t:"2ª SERIE E"},
+{a:"RAFFAELA VITÓRIA DIAS BIGUETTE",pa:67,ps:69,pp:100,t:"2ª SERIE E"},
+{a:"JULIA LEME DE MELO",pa:73,ps:38,pp:100,t:"2ª SERIE E"},
+{a:"KEYRRISON CARDOSO DE SOUZA",pa:63,ps:38,pp:100,t:"2ª SERIE E"},
+{a:"ASHLEY CRISTINA BARBOSA ALVES",pa:71,ps:33,pp:100,t:"2ª SERIE F"},
+{a:"YAGO VITOR BORGES ALVES",pa:69,ps:17,pp:100,t:"2ª SERIE F"},
+{a:"ANA CLARA FRANÇA NASCIMENTO",pa:62,ps:42,pp:100,t:"2ª SERIE F"},
+{a:"RAYSSA DE OLIVEIRA MARQUES LOPES",pa:65,ps:0,pp:100,t:"2ª SERIE F"},
+{a:"LUANA RAMOS DE OLIVEIRA LUCAS",pa:58,ps:0,pp:100,t:"2ª SERIE F"},
+{a:"EMYLLI SARAH DE FREITAS RODRIGUES",pa:60,ps:42,pp:100,t:"2ª SERIE F"},
+{a:"EDUARDA FERNANDES CABRAL",pa:73,ps:8,pp:100,t:"2ª SERIE F"},
+{a:"BRENO ITHALO GONÇALVES SANTOS",pa:72,ps:50,pp:100,t:"2ª SERIE F"},
+{a:"KAUÃ MARTINS TENÓRIO",pa:63,ps:33,pp:100,t:"2ª SERIE F"},
+{a:"VITÓRIA MARANGONI DE OLIVEIRA",pa:56,ps:42,pp:100,t:"2ª SERIE F"},
+{a:"MARIANA DA SILVA MACHADO",pa:74,ps:8,pp:100,t:"2ª SERIE F"},
+{a:"ANA RAQUEL PIRES LIMA SILVA",pa:70,ps:0,pp:100,t:"2ª SERIE F"},
+{a:"JOAO VITOR SOUSA PEREIRA",pa:28,ps:35,pp:0,t:"3ª SERIE A"},
+{a:"SAMIRA MARCOLINO DE CASTRO",pa:68,ps:83,pp:100,t:"3ª SERIE A"},
+{a:"VICTOR ALEXANDRE DE OLIVEIRA MENEZES",pa:73,ps:17,pp:100,t:"3ª SERIE A"},
+{a:"LUCAS GOMES MORALES",pa:70,ps:61,pp:100,t:"3ª SERIE A"},
+{a:"MATHEUS HENRIQUE DE ALMEIDA REIS",pa:65,ps:17,pp:71,t:"3ª SERIE A"},
+{a:"GUSTAVO ANDRADE SILVA",pa:65,ps:48,pp:100,t:"3ª SERIE A"},
+{a:"JOHNNY SU",pa:51,ps:9,pp:29,t:"3ª SERIE A"},
+{a:"DAVI RIBEIRO SOUSA DA SILVA",pa:57,ps:43,pp:100,t:"3ª SERIE B"},
+{a:"FILIPE RODRIGUES NASCIMENTO",pa:37,ps:17,pp:100,t:"3ª SERIE B"},
+{a:"HELIO APARECIDO DE SOUZA CHAGAS",pa:34,ps:4,pp:29,t:"3ª SERIE B"},
+{a:"ANA CLARA LIMA OLIVEIRA",pa:71,ps:100,pp:100,t:"3ª SERIE B"},
+{a:"KAYQUE DOS SANTOS SILVA",pa:29,ps:15,pp:29,t:"3ª SERIE C"},
+{a:"VÍTOR FELIPE GONÇALVES DOS SANTOS",pa:65,ps:31,pp:100,t:"3ª SERIE C"},
+{a:"ALEXIA PACHECO DA SILVA CICERO",pa:64,ps:8,pp:29,t:"3ª SERIE C"},
+{a:"NATHAN TEODOSIO DE BARROS",pa:58,ps:73,pp:100,t:"3ª SERIE C"},
+{a:"THABITA EDUARDA CUTRIM AMARAL",pa:70,ps:81,pp:100,t:"3ª SERIE C"},
+{a:"ISABEL PATRICIA DOS SANTOS MOTA",pa:33,ps:35,pp:29,t:"3ª SERIE C"},
+{a:"RAFAELLY GIMENES GRANADO DA SILVA",pa:39,ps:23,pp:100,t:"3ª SERIE C"},
+{a:"AMANDA DA SILVA NOVAIS",pa:67,ps:42,pp:100,t:"3ª SERIE C"},
+{a:"KAUAN JOAO MOURA DA SILVA",pa:64,ps:81,pp:100,t:"3ª SERIE C"},
+{a:"DANIEL NOVAES DE SOUZA",pa:28,ps:15,pp:29,t:"3ª SERIE C"},
+{a:"WESLEY DOS SANTOS MOREIRA",pa:74,ps:67,pp:100,t:"3ª SERIE D"},
+{a:"MARIA GABRIELLI SOARES TEIXEIRA",pa:29,ps:11,pp:100,t:"3ª SERIE D"},
+{a:"JULIA MOTA HONORATO",pa:35,ps:19,pp:100,t:"3ª SERIE D"},
+{a:"ISAAC CAVALCANTE DA SILVA",pa:26,ps:7,pp:100,t:"3ª SERIE D"},
+{a:"MANUELLE GUIMARÃES TONELI",pa:68,ps:59,pp:100,t:"3ª SERIE D"},
+{a:"ISABELLA PREMOLI RIBEIRO",pa:0,ps:0,pp:0,t:"3ª SERIE D"},
+{a:"LARISSA BARBOSA DE LIMA",pa:26,ps:7,pp:100,t:"3ª SERIE D"},
+{a:"PEDRO HENRIQUE DA SILVA NOVAES",pa:68,ps:67,pp:100,t:"3ª SERIE D"},
+{a:"PEDRO HENRIQUE OLIVEIRA DE CALDAS",pa:74,ps:29,pp:100,t:"3ª SERIE F"},
+{a:"RICKELMY DE SOUZA CUSTÓDIO",pa:72,ps:47,pp:100,t:"3ª SERIE F"},
+{a:"KAUAN HENRICK SANTOS COSSA",pa:71,ps:76,pp:100,t:"3ª SERIE F"},
+{a:"ANA JULIA DA SILVA",pa:10,ps:10,pp:0,t:"3ª SERIE F"},
+{a:"NICOLAS ELOI DE OLIVEIRA",pa:70,ps:18,pp:100,t:"3ª SERIE F"},
+{a:"RICHARD ALVES CAMPOS DO MONTE",pa:74,ps:65,pp:100,t:"3ª SERIE F"},
+{a:"MURILO DE LIMA MARTINS",pa:73,ps:94,pp:100,t:"3ª SERIE F"},
+{a:"JULIA PEREIRA DA SILVA",pa:74,ps:41,pp:100,t:"3ª SERIE F"},
+{a:"HEITOR DE OLIVEIRA ADRIANO",pa:72,ps:76,pp:100,t:"3ª SERIE F"},
+{a:"GEOVANNA SILVA",pa:60,ps:39,pp:100,t:"3ª SERIE G"},
+{a:"EDUARDA SILVA",pa:67,ps:44,pp:100,t:"3ª SERIE G"},
+{a:"YSABELLI DE FRANCA ROMAO",pa:74,ps:39,pp:100,t:"3ª SERIE G"},
+{a:"RAFAEL DE BEM DAMASCENO",pa:64,ps:61,pp:100,t:"3ª SERIE G"},
+{a:"KAUÃ VINICIUS DE SOUSA SILVA",pa:58,ps:39,pp:100,t:"3ª SERIE G"},
+{a:"JUHLIA FERNANDES FERREIRA",pa:70,ps:39,pp:100,t:"3ª SERIE G"},
+{a:"KAMILLY VITÓRIA DE SIQUEIRA CARMO",pa:70,ps:50,pp:100,t:"3ª SERIE G"},
+{a:"KARINE SIQUEIRA DE BARROS",pa:66,ps:39,pp:100,t:"3ª SERIE G"},
+{a:"ENZO VIEIRA TEIXEIRA",pa:63,ps:61,pp:100,t:"3ª SERIE G"},
+{a:"MARIANA DE LIMA LUNA",pa:73,ps:39,pp:100,t:"3ª SERIE G"},
+{a:"LILIA DA SILVA",pa:68,ps:78,pp:100,t:"3ª SERIE G"},
+{a:"BRENO BRAGA GREGÓRIO",pa:71,ps:83,pp:100,t:"3ª SERIE G"},
+{a:"MARCOS VINICIUS DA SILVA CARDOSO",pa:72,ps:89,pp:100,t:"3ª SERIE G"},
+{a:"VITORIA VILLALTA DORA",pa:73,ps:39,pp:100,t:"3ª SERIE G"},
+{a:"GABRIEL FERREIRA DA SILVA",pa:74,ps:94,pp:100,t:"3ª SERIE G"},
+{a:"KAYKE LEONARDO DE SANTANA",pa:48,ps:33,pp:100,t:"3ª SERIE H"},
+{a:"DAVI AQUINO MARTINS",pa:72,ps:80,pp:100,t:"3ª SERIE H"},
+{a:"BRUNO HENRIQUE ROCHA CARVALHO",pa:74,ps:33,pp:100,t:"3ª SERIE H"},
+{a:"MARCOS VINICIUS GOES GOMES",pa:61,ps:60,pp:100,t:"3ª SERIE H"},
+{a:"ANANDA VICTORIA DE OLIVEIRA LEITE",pa:73,ps:53,pp:100,t:"3ª SERIE H"},
+{a:"KARLA DOS SANTOS GABRIELI",pa:72,ps:73,pp:100,t:"3ª SERIE H"},
+{a:"RICHARD MENDES TELES ALVES",pa:72,ps:73,pp:100,t:"3ª SERIE H"},
+{a:"GUILHERME FERDINANDO HENRIQUES",pa:72,ps:73,pp:100,t:"3ª SERIE H"},
+{a:"ANTONIO IAGO DE SOUZA LEANDRO",pa:67,ps:33,pp:100,t:"3ª SERIE H"},
+{a:"EMILLY VITORIA CARVALHO DE SOUSA",pa:73,ps:53,pp:100,t:"3ª SERIE H"},
+{a:"NATHAN CABRAL DE ALBUQUERQUE",pa:72,ps:67,pp:100,t:"3ª SERIE H"},
+{a:"VITOR GISSI SILVA",pa:69,ps:100,pp:100,t:"3ª SERIE H"},
+{a:"ISABELLY CESAR VIEIRA",pa:63,ps:33,pp:100,t:"3ª SERIE H"},
+{a:"LARA FERREIRA MARTINS",pa:74,ps:53,pp:100,t:"3ª SERIE H"},
+{a:"MIGUEL BRAGA DE ARAUJO COSTA",pa:68,ps:93,pp:100,t:"3ª SERIE H"},
+{a:"VICTOR QUEIROZ BERALDO",pa:66,ps:33,pp:100,t:"3ª SERIE H"},
+{a:"YASMIN DE CARVALHO FERREIRA",pa:64,ps:61,pp:100,t:"3ª SERIE I"},
+{a:"WESLEY DA SILVA LEAL",pa:68,ps:33,pp:100,t:"3ª SERIE I"},
+{a:"BRENNO SILVA MANHA DE OLIVEIRA",pa:70,ps:39,pp:100,t:"3ª SERIE I"},
+{a:"YURI PIO MACHADO DA SILVA",pa:68,ps:33,pp:100,t:"3ª SERIE I"},
+{a:"RICHARD GABRIEL DA SILVA PORFIRIO",pa:69,ps:50,pp:100,t:"3ª SERIE I"},
+{a:"KAUANY DE SOUZA SOARES",pa:71,ps:83,pp:100,t:"3ª SERIE I"},
+{a:"TAUANY PEREIRA DIAS",pa:53,ps:33,pp:100,t:"3ª SERIE I"},
+{a:"LUÍS HENRIQUE SANTIAGO TAVARES",pa:69,ps:78,pp:100,t:"3ª SERIE I"},
+{a:"LARA SELL MENDES",pa:62,ps:33,pp:100,t:"3ª SERIE I"},
+{a:"EVELYN NASCIMENTO DE OLIVEIRA",pa:59,ps:33,pp:100,t:"3ª SERIE I"},
+{a:"GABRIEL CAMARU RODRIGUES",pa:50,ps:33,pp:100,t:"3ª SERIE I"},
+{a:"CLAUDIO EDUARDO DA SILVA MACHADO",pa:66,ps:61,pp:100,t:"3ª SERIE I"},
+{a:"MATHEUS KAUAN DE JESUS JACINTO",pa:72,ps:33,pp:100,t:"3ª SERIE I"},
+{a:"NATASHA CAMARGO FARIAS",pa:62,ps:33,pp:100,t:"3ª SERIE I"},
+{a:"EMANUELLA VITÓRIA DE ARAUJO",pa:71,ps:72,pp:100,t:"3ª SERIE I"},
+{a:"RYAN MATHEUS KETNER",pa:73,ps:33,pp:100,t:"3ª SERIE I"},
+{a:"MIRELLA RODRIGUES DOS SANTOS",pa:67,ps:61,pp:100,t:"3ª SERIE I"},
+{a:"ANA JULIA NUNES FRANCA",pa:61,ps:33,pp:100,t:"3ª SERIE I"}
+];
+
+function avg(a,k){return a.length?(a.reduce((s,d)=>s+d[k],0)/a.length):0}
+function cls(v){return v>=70?'td-green':v>=50?'td-orange':'td-red'}
+function arrow(a,b){if(a>b)return'<span class="td-green">&#9650;+'+(a-b)+'%</span>';if(a<b)return'<span class="td-red">&#9660;'+(a-b)+'%</span>';return'<span style="color:#94a3b8">&#9679;</span>'}
+
+const turmas={};
+const turmaOrder=[];
+DATA.forEach(d=>{if(!turmas[d.t]){turmas[d.t]=[];turmaOrder.push(d.t)}turmas[d.t].push(d)});
+
+const total=DATA.length;
+const avgPA=avg(DATA,'pa');
+const avgPS=avg(DATA,'ps');
+const criticos=DATA.filter(d=>d.pa<50).length;
+const zero=DATA.filter(d=>d.ps===0).length;
+const baixa=DATA.filter(d=>d.ps>0&&d.ps<30).length;
+const melhora=DATA.filter(d=>d.ps>d.pp).length;
+const queda=DATA.filter(d=>d.ps<d.pp).length;
+const nc=turmaOrder.length;
+
+document.getElementById('globalStats').innerHTML=`
+<div class="snap-card card-alert"><div class="number">${total}</div><div class="label">Alunos Monitorados</div></div>
+<div class="snap-card card-warn"><div class="number">${nc}</div><div class="label">Turmas</div></div>
+<div class="snap-card card-alert"><div class="number">${avgPA.toFixed(1)}%</div><div class="label">Presença Anual Média</div></div>
+<div class="snap-card card-warn"><div class="number">${avgPS.toFixed(1)}%</div><div class="label">Semana Atual Média</div></div>
+<div class="snap-card card-alert"><div class="number">${criticos}</div><div class="label">Críticos (&lt;50% Anual)</div></div>
+<div class="snap-card card-alert"><div class="number">${zero}</div><div class="label">Ausência Total (0%)</div></div>
+<div class="snap-card card-warn"><div class="number">${queda}</div><div class="label">Em Queda</div></div>
+<div class="snap-card card-good"><div class="number">${melhora}</div><div class="label">Em Melhora</div></div>
+`;
+document.getElementById('avgAnualBadge').textContent=avgPA.toFixed(1)+'%';
+document.getElementById('zeroBadge').textContent=zero;
+document.getElementById('critBadge').textContent=criticos;
+
+// ALERTAS
+let alertHtml='';
+const critAlunos=DATA.filter(d=>d.pa<30).sort((a,b)=>a.pa-b.pa);
+if(critAlunos.length){
+  alertHtml+='<div style="margin-bottom:12px"><strong style="font-size:8.5pt;color:#991b1b;display:block;margin-bottom:6px">Presença Anual Abaixo de 30% — Risco Extremo</strong>';
+  critAlunos.forEach(c=>{
+    alertHtml+=`<div class="alert-box"><span class="alert-icon">🚨</span><strong>${c.a}</strong> — ${c.t} — Presença anual: <strong>${c.pa.toFixed(1)}%</strong> | Semana atual: ${c.ps}%</div>`;
+  });
+  alertHtml+='</div>';
+}
+const zeroAlunos=DATA.filter(d=>d.ps===0);
+if(zeroAlunos.length){
+  alertHtml+='<div><strong style="font-size:8.5pt;color:#854d0e;display:block;margin-bottom:6px">0% de Presença na Semana Atual</strong>';
+  zeroAlunos.forEach(c=>{
+    alertHtml+=`<div class="alert-box-warn" style="display:flex;align-items:center;gap:8px;font-size:7.5pt;padding:6px 10px;margin:4px 0;border-radius:12px"><span style="font-size:1rem">⚠️</span><strong>${c.a}</strong> — ${c.t} — Anual: ${c.pa.toFixed(1)}%</div>`;
+  });
+  alertHtml+='</div>';
+}
+document.getElementById('alertsPanel').innerHTML=alertHtml;
+
+function render(){
+  const search=document.getElementById('searchBox').value.toUpperCase();
+  const etapa=document.getElementById('filterEtapa').value;
+  const sort=document.getElementById('sortBy').value;
+  let html='';
+
+  turmaOrder.forEach(tk=>{
+    if(etapa!=='todas'&&!tk.includes(etapa))return;
+    let alunos=turmas[tk];
+    if(search)alunos=alunos.filter(d=>d.a.toUpperCase().includes(search));
+    if(!alunos.length)return;
+    if(sort==='pa')alunos.sort((a,b)=>a.pa-b.pa);
+    else if(sort==='ps')alunos.sort((a,b)=>a.ps-b.ps);
+
+    const tAvg=avg(alunos,'pa');
+    const tAvgPs=avg(alunos,'ps');
+    const tCrit=alunos.filter(d=>d.pa<50).length;
+    const tZero=alunos.filter(d=>d.ps===0).length;
+    const tid=tk.replace(/\s+/g,'_').replace(/[^a-zA-Z0-9_]/g,'');
+
+    html+=`<div class="turma-section">
+      <div class="turma-header" onclick="toggle('${tid}')">
+        <h4>📚 ${tk} <span style="opacity:.6;font-weight:400;font-size:.75rem">(${alunos.length})</span></h4>
+        <div class="turma-badges">
+          <span class="badge badge-blue">Anual: ${tAvg.toFixed(1)}%</span>
+          <span class="badge ${tAvgPs>=50?'badge-amber':'badge-red'}">Semana: ${tAvgPs.toFixed(1)}%</span>
+          ${tCrit?`<span class="badge badge-red">${tCrit} crítico</span>`:''}
+          ${tZero?`<span class="badge badge-red">${tZero} ausente</span>`:''}
+          <span class="toggle-icon" id="i_${tid}">▼</span>
+        </div>
+      </div>
+      <div class="table-wrap" id="t_${tid}">
+        <table><thead><tr><th>#</th><th style="text-align:left">Aluno(a)</th><th>Risco</th><th>Pres. Anual</th><th>Semana Atual</th><th>Sem. Anterior</th><th>Tendência</th></tr></thead><tbody>
+        ${alunos.map((d,i)=>{
+          const r=d.pa<50?'td-red':d.pa<70?'td-orange':'td-green';
+          const rl=d.pa<50?'ALTISSIMO':d.pa<70?'ALTO':'ATENÇÃO';
+          const z=d.ps===0;
+          return`<tr class="${z?'zero-row':''}"${d.pa<30?' style="background:rgba(211,47,47,.06)"':''}>
+            <td class="num" style="color:var(--texto-suave)">${i+1}</td>
+            <td class="td-name">${d.a}${z?'<span style="margin-left:4px;font-family:DM Mono,monospace;font-size:5pt;background:var(--vermelho-bg);color:#991b1b;padding:1px 5px;border-radius:3px">AUSENTE</span>':''}</td>
+            <td><span class="badge ${rl==='ALTISSIMO'?'badge-red':rl==='ALTO'?'badge-amber':'badge-green'}">${rl}</span></td>
+            <td class="num ${cls(d.pa)}">${d.pa.toFixed(1)}%</td>
+            <td class="num ${cls(d.ps)}">${d.ps===0?'<span style="background:var(--vermelho-bg);padding:1px 6px;border-radius:3px;font-weight:800">0%</span>':d.ps.toFixed(1)+'%'}</td>
+            <td class="num ${cls(d.pp)}">${d.pp.toFixed(1)}%</td>
+            <td>${arrow(d.ps,d.pp)}</td>
+          </tr>`;
+        }).join('')}
+        </tbody></table>
+      </div>
+    </div>`;
+  });
+
+  document.getElementById('reportContent').innerHTML=html;
+}
+
+function toggle(id){const el=document.getElementById('t_'+id);const ic=document.getElementById('i_'+id);if(el.classList.contains('open')){el.classList.remove('open');ic.classList.remove('open')}else{el.classList.add('open');ic.classList.add('open')}}
+
+document.getElementById('searchBox').addEventListener('input',render);
+document.getElementById('filterEtapa').addEventListener('change',render);
+document.getElementById('sortBy').addEventListener('change',render);
+render();
+</script>
+</body>
+</html>
